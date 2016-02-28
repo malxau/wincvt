@@ -1,0 +1,69 @@
+<HTML>
+<HEAD>
+	<TITLE>WinCvt error codes</TITLE>
+	<LINK HREF=help.css REL=stylesheet TYPE=text/css>
+</HEAD>
+<BODY>
+<H1>WinCvt error codes</H1>
+
+<DL>
+
+<DT>WINCVT_SUCCESS (0)</DT>
+<DD>The operation completed successfully.</DD>
+
+<DT>WINCVT_ERROR_OPEN (-1)</DT>
+<DD>The converter could not open the specified file.</DD>
+
+<DT>WINCVT_ERROR_READ (-2)</DT>
+<DD>The converter could not read from the specified file.</DD>
+
+<DT>WINCVT_ERROR_WRITE (-4)</DT>
+<DD>The converter could not write to the specified file.</DD>
+
+<DT>WINCVT_ERROR_DATA (-5)</DT>
+<DD>The converter cannot convert this file because it contains invalid data for this format.</DD>
+
+<DT>WINCVT_ERROR_NO_MEMORY (-8)</DT>
+<DD>There is not enough memory to complete this operation.</DD>
+
+<DT>WINCVT_ERROR_DISK_FULL (-10)</DT>
+<DD>The converter could not write to the disk because it is full.</DD>
+
+<DT>WINCVT_ERROR_CREATE (-12)</DT>
+<DD>The converter could not create the specified file.</DD>
+
+<DT>WINCVT_ERROR_CANCEL (-13)</DT>
+<DD>The operation was cancelled by the user.</DD>
+
+<DT>WINCVT_ERROR_WRONG_TYPE (-14)</DT>
+<DD>The converter cannot convert this file because it is in an unsupported format.</DD>
+
+<DT>WINCVT_ERROR_BAD_IMAGE (-15)</DT>
+<DD>The converter cannot be loaded because it has not been installed correctly.</DD>
+
+<DT>WINCVT_ERROR_BAD_PARAM_n (-999 - -991)</DT>
+<DD>Parameter n passed to function is invalid.  This is an application bug.</DD>
+
+<DT>WINCVT_ERROR_BAD_ENTRY (-990)</DT>
+<DD>Functionality not supported by converter.</DD>
+
+<DT>WINCVT_ERROR_REGISTRY (-989)</DT>
+<DD>The registry does not contain required information for this operation.</DD>
+
+<DT>WINCVT_ERROR_CONVERTER_VETO (-988)</DT>
+<DD>The converter declined to proceed with this operation.</DD>
+
+<DT>WINCVT_ERROR_NO_CONVERTERS (-987)</DT>
+<DD>The system does not contain converters that can convert this file.</DD>
+
+<DT>WINCVT_ERROR_BAD_PATH (-986)</DT>
+<DD>The specified path could not be expanded to a full path.</DD>
+
+</DL>
+
+<H2>See also</H2>
+<P>
+<A HREF="WinCvtGetErrorString.htm">WinCvtGetErrorString</A>.</P>
+
+</BODY>
+</HTML>

@@ -1,0 +1,57 @@
+<HTML>
+<HEAD>
+	<TITLE>WinCvtGetExportConverterList</TITLE>
+	<LINK HREF=help.css REL=stylesheet TYPE=text/css>
+</HEAD>
+<BODY>
+<H1>WinCvtGetExportConverterList</H1>
+
+<P>The <B>WinCvtGetExportConverterList</B> function retrieves the list of converters that can convert from RTF to a native format.</P>
+
+<CODE><PRE>
+WINCVT_STATUS
+WinCvtGetExportConverterList(
+  WINCVT_CVT_LIST* List,    // The resulting list of converters.
+  LPCSTR szClass,           // The class to look for (optional.)
+  LPCSTR szExtension        // The extension to look for (optional.)
+);
+</PRE></CODE>
+
+<H2>Parameters</H2>
+
+<DL>
+
+<DT>List</DT>
+<DD>Pointer to a list object.  Upon successful completion of this function, this will point to a list of export conversion classes the system supports that match the specified extension and class criteria.  To enumerate this list, use the <A HREF="WinCvtGetFirstClass.htm">WinCvtGetFirstClass</A> and <A HREF="WinCvtGetNextClass.htm">WinCvtGetNextClass</A> functions.  To free this list, call <A HREF="WinCvtFreeConverterList.htm">WinCvtFreeConverterList</A>.</DD>
+
+<DT>szClass</DT>
+<DD>Specifies the class to locate.  If specified, the list should contain at most one element corresponding to the entry for that class.  If NULL, all classes of converters will be returned.</DD>
+
+<DT>szExtension</DT>
+<DD>Specifies the extension to look for.  If specified, only classes that support exporting to the specified extension will be returned.  This parameter can also include a full filename whose extension should be used in the search.  If NULL, converters will be returned regardless of the extensions they support.</DD>
+
+</DL>
+
+<H2>Return Values</H2>
+<P>If the function succeeds, the return value is WINCVT_SUCCESS.  If the function fails, the return value is the error code describing the failure.  This code can be turned into a human readable string using the <A HREF="WinCvtGetErrorString.htm">WinCvtGetErrorString</A>.</P>
+
+<H2>Remarks</H2>
+<P>The <B>WinCvtGetExportConverterList</B> function retrieves the list of converters that can convert from RTF to a native format.  This list can be filtered by class or extension.  If both szClass and szExtension are NULL, all export converters supported by the system will be returned.  To install a new converter so that it will be returned by this function, use the <A HREF="WinCvtInstallConverter.htm">WinCvtInstallConverter</A> function.  To list converters that support importing (converting from a format to RTF), use the <A HREF="WinCvtGetImportConverterList.htm">WinCvtGetImportConverterList</A> function.</P>
+
+<H2>QuickInfo</H2>
+<P>
+<B>WinCvt: </B>Requires 0.1.0.<BR>
+<B>Header: </B>Declared in WinCvt.h.<BR>
+<B>Import Library: </B>Use WinCvt.lib.<BR>
+
+<H2>See Also</H2>
+<P>
+<A HREF="WinCvtFreeConverterList.htm">WinCvtFreeConverterList</A>,
+<A HREF="WinCvtGetFirstClass.htm">WinCvtGetFirstClass</A>,
+<A HREF="WinCvtGetNextClass.htm">WinCvtGetNextClass</A>,
+<A HREF="WinCvtGetErrorString.htm">WinCvtGetErrorString</A>,
+<A HREF="WinCvtGetImportConverterList.htm">WinCvtGetImportConverterList</A>,
+<A HREF="WinCvtInstallConverter.htm">WinCvtInstallConverter</A>.</P>
+
+</BODY>
+</HTML>

@@ -1,0 +1,37 @@
+<HTML>
+<HEAD>
+	<TITLE>WinCvtFinalTeardown</TITLE>
+	<LINK HREF=help.css REL=stylesheet TYPE=text/css>
+</HEAD>
+<BODY>
+<H1>WinCvtFinalTeardown</H1>
+
+<P>A well behaved application should call <B>WinCvtFinalTeardown</B> before terminating.</P>
+
+<CODE><PRE>
+VOID
+WinCvtFinalTeardown();
+</PRE></CODE>
+
+<H2>Parameters</H2>
+
+<P>There are no parameters for this function.</P>
+
+<H2>Return Values</H2>
+
+<P>There is no return value from this function.</P>
+
+<H2>Remarks</H2>
+
+<P>A well behaved application should call <B>WinCvtFinalTeardown</B> immediately before terminating to ensure any persistant state is torn down.  With debugging enabled, this function will also ensure there are no application leaks when the application terminates.</P>
+
+<H2>QuickInfo</H2>
+<P>
+<B>WinCvt: </B>Requires 0.1.0.<BR>
+<B>Header: </B>Declared in WinCvt.h.<BR>
+<B>Import Library: </B>Use WinCvt.lib.<BR>
+
+<H2>See Also</H2>
+
+</BODY>
+</HTML>

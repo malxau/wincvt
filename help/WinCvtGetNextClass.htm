@@ -1,0 +1,48 @@
+<HTML>
+<HEAD>
+	<TITLE>WinCvtGetNextClass</TITLE>
+	<LINK HREF=help.css REL=stylesheet TYPE=text/css>
+</HEAD>
+<BODY>
+<H1>WinCvtGetNextClass</H1>
+
+<P>The <B>WinCvtGetNextClass</B> obtains a subsequent item from a list.</P>
+
+<CODE><PRE>
+WINCVT_CVT_CLASS
+WinCvtGetNextClass(
+  WINCVT_CVT_CLASS Item  // The item preceeding the desired item.
+);
+</PRE></CODE>
+
+<H2>Parameters</H2>
+
+<DL>
+
+<DT>Item</DT>
+<DD>The item preceeding the desired item in the list.  This item is obtained from a prior call to <A HREF="WinCvtGetFirstClass.htm">WinCvtGetFirstClass</A> or <B>WinCvtGetNextClass</B>.
+
+</DL>
+
+<H2>Return Values</H2>
+<P>The return value is the next converter class in the list.  If there are no more elements in the list, the return value is NULL.  To obtain the next element in the list, use the <B>WinCvtGetNextClass</B> function again.  The returned class can be used by the <A HREF="WinCvtGetClassDescription.htm">WinCvtGetClassDescription</A>, <A HREF="WinCvtGetClassExtensions.htm">WinCvtGetClassExtensions</A>, <A HREF="WinCvtGetClassFileName.htm">WinCvtGetClassFileName</A> and <A HREF="WinCvtGetClassName.htm">WinCvtGetClassName</A> functions.</P>
+
+<H2>Remarks</H2>
+<P>The <B>WinCvtGetNextClass</B> obtains a subsequent item from a list.</P>
+
+<H2>QuickInfo</H2>
+<P>
+<B>WinCvt: </B>Requires 0.1.0.<BR>
+<B>Header: </B>Declared in WinCvt.h.<BR>
+<B>Import Library: </B>Use WinCvt.lib.<BR>
+
+<H2>See Also</H2>
+<P>
+<A HREF="WinCvtGetClassDescription.htm">WinCvtGetClassDescription</A>,
+<A HREF="WinCvtGetClassExtensions.htm">WinCvtGetClassExtensions</A>,
+<A HREF="WinCvtGetClassFileName.htm">WinCvtGetClassFileName</A>,
+<A HREF="WinCvtGetClassName.htm">WinCvtGetClassName</A>,
+<A HREF="WinCvtGetNextClass.htm">WinCvtGetNextClass</A>.</P>
+
+</BODY>
+</HTML>

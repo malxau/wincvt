@@ -1,0 +1,41 @@
+<HTML>
+<HEAD>
+	<TITLE>cvttype.exe</TITLE>
+	<LINK HREF=help.css REL=stylesheet TYPE=text/css>
+</HEAD>
+<BODY>
+<H1>cvttype.exe</H1>
+
+<P>The <B>cvttype.exe</B> binary queries the system registry for a converter capable of converting the specified document.</P>
+
+<CODE><PRE>
+cvttype.exe [-q] file
+</PRE></CODE>
+
+<H2>Parameters</H2>
+
+<DL>
+
+<DT>-q</DT>
+<DD>Quick mode.  In this mode, the registry is investigated for a converter capable of reading the document by extension only.  If this flag is not specified, the file is actively interrogated to determine if it can be converted.</DD>
+
+<DT>file</DT>
+<DD>Specifies the file whose type is to be determined.</DD>
+
+</DL>
+
+<H2>Return Values</H2>
+
+<P>The <B>cvttype.exe</B> binary returns 0 on success and nonzero on failure.</P>
+
+<H2>Remarks</H2>
+<P>The <B>cvttype.exe</B> binary queries the system registry for a converter capable of converting the specified document.</P>
+
+<H2>QuickInfo</H2>
+<P>
+<B>WinCvt: </B>Requires 0.1.0.<BR>
+
+<H2>See Also</H2>
+
+</BODY>
+</HTML>

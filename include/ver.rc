@@ -1,0 +1,49 @@
+/* WINCVT
+ * =======
+ * This software is Copyright (c) 2006-2007 Malcolm Smith.
+ * No warranty is provided, including but not limited to
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ * This code is licenced subject to the GNU General
+ * Public Licence (GPL).  See the COPYING file for more.
+ */
+
+#include <windows.h>
+#include "wincvt.h"
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION WINCVT_VERSION_MAJOR,WINCVT_VERSION_MINOR,WINCVT_VERSION_MICRO,0
+ PRODUCTVERSION WINCVT_VERSION_MAJOR,WINCVT_VERSION_MINOR,WINCVT_VERSION_MICRO,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+#ifdef _DLL
+ FILETYPE 0x2L
+#else
+ FILETYPE 0x1L
+#endif
+ FILESUBTYPE 0x0L
+BEGIN
+	BLOCK "StringFileInfo"
+	BEGIN
+		BLOCK "000904b0"
+		BEGIN
+			VALUE "Comments", WINCVT_NAME "\0"
+			VALUE "CompanyName", "Malx\0"
+			VALUE "FileDescription", WINCVT_NAME "\0"
+			VALUE "FileVersion", WINCVT_VER_STRING "\0"
+			VALUE "LegalCopyright", WINCVT_COPYRIGHT "\0"
+			VALUE "ProductName", WINCVT_NAME "\0"
+			VALUE "ProductVersion", WINCVT_VER_STRING "\0"
+		END
+	END
+	BLOCK "VarFileInfo"
+	BEGIN
+		VALUE "Translation", 0x009, 0x4b0
+	END
+END
+
+

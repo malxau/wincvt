@@ -1,0 +1,25 @@
+
+
+EXPORTS
+	WinCvtAreVersionsCompatible
+	WinCvtConvertFile
+	WinCvtConvertToRtf
+	WinCvtConvertToNative
+	WinCvtFinalTeardown
+	WinCvtFreeConverterList
+	WinCvtGetErrorString
+	WinCvtGetConverterExportCapabilityList
+	WinCvtGetConverterImportCapabilityList
+	WinCvtGetExportConverterList
+	WinCvtGetFirstClass
+	WinCvtGetImportConverterList
+	WinCvtGetNextClass
+	WinCvtGetClassFileName
+	WinCvtGetClassName
+	WinCvtGetClassDescription
+	WinCvtGetClassExtensions
+	WinCvtInstallConverter
+	WinCvtLibraryVersion
+	WinCvtUninstallConverter
+	DbgRealAssert
+

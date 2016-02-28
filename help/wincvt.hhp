@@ -1,0 +1,51 @@
+[OPTIONS]
+Compatibility=1.1
+Compiled file=wincvt.chm
+Contents file=wincvt.hhc
+Default topic=Intro.htm
+Display compile progress=Yes
+Full-text search=Yes
+Index file=wincvt.hhk
+Language=0x409 English (United States)
+
+
+[FILES]
+Intro.htm
+Errors.htm
+cvtfile.htm
+cvtinst.htm
+cvtopen.htm
+cvtquery.htm
+cvttype.htm
+cvtver.htm
+cvtview.htm
+cvtwiz.htm
+WINCVT_GET_MAJOR_VERSION.htm
+WINCVT_GET_MICRO_VERSION.htm
+WINCVT_GET_MINOR_VERSION.htm
+WinCvtAreVersionsCompatible.htm
+WinCvtConvertFile.htm
+WinCvtConvertToNative.htm
+WinCvtConvertToRtf.htm
+WinCvtFinalTeardown.htm
+WinCvtFreeConverterList.htm
+WinCvtGetClassDescription.htm
+WinCvtGetClassExtensions.htm
+WinCvtGetClassFileName.htm
+WinCvtGetClassName.htm
+WinCvtGetConverterImportCapabilityList.htm
+WinCvtGetConverterExportCapabilityList.htm
+WinCvtGetErrorString.htm
+WinCvtGetExportConverterList.htm
+WinCvtGetFirstClass.htm
+WinCvtGetNextClass.htm
+WinCvtGetImportConverterList.htm
+WinCvtHeaderVersion.htm
+WinCvtLibraryVersion.htm
+WinCvtInstallConverter.htm
+WinCvtIsLibraryCompatible.htm
+WinCvtProgressCallback.htm
+WinCvtUninstallConverter.htm
+
+[INFOTYPES]
+

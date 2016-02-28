@@ -1,0 +1,50 @@
+<HTML>
+<HEAD>
+	<TITLE>cvtfile.exe</TITLE>
+	<LINK HREF=help.css REL=stylesheet TYPE=text/css>
+</HEAD>
+<BODY>
+<H1>cvtfile.exe</H1>
+
+<P>The <B>cvtfile.exe</B> binary converts a file from one format to another.</P>
+
+<CODE><PRE>
+cvtfile.exe [-c ImportClass] [-e ExportClass] [-p] SourceFile [DestFile]
+</PRE></CODE>
+
+<H2>Parameters</H2>
+
+<DL>
+
+<DT>-c ImportClass</DT>
+<DD>Specifies the conversion class to use for converting the source file to RTF.  If not specified, this will be detected from the source file itself.</DD>
+
+<DT>-e ExportClass</DT>
+<DD>Specifies the conversion class to use for converting the RTF to a destination format.  If not specified, the destination format will be RTF.  If specified, DestFile must also be specified.</DD>
+
+<DT>-p</DT>
+<DD>Display progress notifications.  This can only be specified if the data is being output to a file (ie., DestFile is specified.)  This option requires WinCvt 0.3.1 or newer.</DD>
+
+<DT>SourceFile</DT>
+<DD>Specifies the original file to translate.  This file can be in any format for which converters exist.</DD>
+
+<DT>DestFile</DT>
+<DD>Specifies the new file to create.  If the file exists, it is deleted.  This parameter must be specified if -e is specified.  If -e is not specified, and DestFile is not specified, RTF will be sent to standard output.  If DestFile is specified, -p must not be specified.</DD>
+
+</DL>
+
+<H2>Return Values</H2>
+
+<P>The <B>cvtfile.exe</B> binary returns 0 on success and nonzero on failure.</P>
+
+<H2>Remarks</H2>
+<P>The <B>cvtfile.exe</B> binary converts a file from one format to another.</P>
+
+<H2>QuickInfo</H2>
+<P>
+<B>WinCvt: </B>Requires 0.1.0.<BR>
+
+<H2>See Also</H2>
+
+</BODY>
+</HTML>

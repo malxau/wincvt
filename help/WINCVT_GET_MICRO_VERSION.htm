@@ -1,0 +1,47 @@
+<HTML>
+<HEAD>
+	<TITLE>WINCVT_GET_MICRO_VERSION</TITLE>
+	<LINK HREF=help.css REL=stylesheet TYPE=text/css>
+</HEAD>
+<BODY>
+<H1>WINCVT_GET_MICRO_VERSION</H1>
+
+<P>The <B>WINCVT_GET_MICRO_VERSION</B> macro retrieves the micro version component from a version DWORD.</P>
+
+<CODE><PRE>
+DWORD
+WINCVT_GET_MICRO_VERSION(
+  DWORD Version     // The version to extract from
+);
+</PRE></CODE>
+
+<H2>Parameters</H2>
+
+<DL>
+
+<DT>Version</DT>
+<DD>Specifies the version whose micro component is required.  This version can be obtained from the <A HREF="WinCvtHeaderVersion.htm">WinCvtHeaderVersion</A> or <A HREF="WinCvtLibraryVersion.htm">WinCvtLibraryVersion</A> function.</DD>
+
+</DL>
+
+<H2>Return Values</H2>
+<P>The micro version component.</P>
+
+<H2>Remarks</H2>
+<P>The <B>WINCVT_GET_MICRO_VERSION</B> macro retrieves the micro version component from a version DWORD.  A version is represented as "major.minor.micro".  To obtain the major version component, use the <A HREF="WINCVT_GET_MAJOR_VERSION.htm">WINCVT_GET_MAJOR_VERSION</A> macro.  To obtain the minor version component, use the <A HREF="WINCVT_GET_MINOR_VERSION.htm">WINCVT_GET_MINOR_VERSION</A> macro.</P>
+
+<H2>QuickInfo</H2>
+<P>
+<B>WinCvt: </B>Requires 0.1.0.<BR>
+<B>Header: </B>Declared in WinCvt.h.<BR>
+<B>Import Library: </B>N/A.<BR>
+
+<H2>See Also</H2>
+<P>
+<A HREF="WINCVT_GET_MAJOR_VERSION.htm">WINCVT_GET_MAJOR_VERSION</A>,
+<A HREF="WINCVT_GET_MINOR_VERSION.htm">WINCVT_GET_MINOR_VERSION</A>,
+<A HREF="WinCvtHeaderVersion.htm">WinCvtHeaderVersion</A>,
+<A HREF="WinCvtLibraryVersion.htm">WinCvtLibraryVersion</A>.</P>
+
+</BODY>
+</HTML>

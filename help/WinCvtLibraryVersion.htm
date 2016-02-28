@@ -1,0 +1,42 @@
+<HTML>
+<HEAD>
+	<TITLE>WinCvtLibraryVersion</TITLE>
+	<LINK HREF=help.css REL=stylesheet TYPE=text/css>
+</HEAD>
+<BODY>
+<H1>WinCvtLibraryVersion</H1>
+
+<P>The <B>WinCvtLibraryVersion</B> function returns the version of the WinCvt library that the running application is currently using.</P>
+
+<CODE><PRE>
+DWORD
+WinCvtLibraryVersion();
+</PRE></CODE>
+
+<H2>Parameters</H2>
+
+<DL>
+</DL>
+
+<H2>Return Values</H2>
+<P>The version of the WinCvt library that the running application is using in DWORD format.  To decode, use <A HREF="WINCVT_GET_MAJOR_VERSION.htm">WINCVT_GET_MAJOR_VERSION</A>, <A HREF="WINCVT_GET_MINOR_VERSION.htm">WINCVT_GET_MINOR_VERSION</A> and <A HREF="WINCVT_GET_MICRO_VERSION.htm">WINCVT_GET_MICRO_VERSION</A>.
+
+<H2>Remarks</H2>
+<P>The <B>WinCvtLibraryVersion</B> function returns the version of the WinCvt library that the running application is currently using.  The version of the headers that the application was compiled against can be obtained with <A HREF="WinCvtHeaderVersion.htm">WinCvtHeaderVersion</A>.  To determine if the running application can be safely used with this library, call the <A HREF="WinCvtIsLibraryCompatible.htm">WinCvtIsLibraryCompatible</A> function.</P>
+
+<H2>QuickInfo</H2>
+<P>
+<B>WinCvt: </B>Requires 0.1.0.<BR>
+<B>Header: </B>Declared in WinCvt.h.<BR>
+<B>Import Library: </B>Use WinCvt.lib.<BR>
+
+<H2>See Also</H2>
+<P>
+<A HREF="WINCVT_GET_MAJOR_VERSION.htm">WINCVT_GET_MAJOR_VERSION</A>,
+<A HREF="WINCVT_GET_MINOR_VERSION.htm">WINCVT_GET_MINOR_VERSION</A>,
+<A HREF="WINCVT_GET_MICRO_VERSION.htm">WINCVT_GET_MICRO_VERSION</A>,
+<A HREF="WinCvtHeaderVersion.htm">WinCvtHeaderVersion</A>,
+<A HREF="WinCvtIsLibraryCompatible.htm">WinCvtIsLibraryCompatible</A>.</P>
+
+</BODY>
+</HTML>

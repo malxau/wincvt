@@ -1,0 +1,53 @@
+/* WINCVT
+ * =======
+ * This software is Copyright (c) 2006-2008 Malcolm Smith.
+ * No warranty is provided, including but not limited to
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ * This code is licenced subject to the GNU General
+ * Public Licence (GPL).  See the COPYING file for more.
+ */
+
+#include <windows.h>
+#include "..\include\ver.rc"
+#include "viewdlg.h"
+
+#ifdef MANIFEST
+//
+// We can build the manifest using old resource compilers,
+// but need to ensure the definitions are in place.
+//
+#ifndef CREATEPROCESS_MANIFEST_RESOURCE_ID
+#define CREATEPROCESS_MANIFEST_RESOURCE_ID 1
+#endif
+
+#ifndef RT_MANIFEST
+#define RT_MANIFEST 24
+#endif
+
+CREATEPROCESS_MANIFEST_RESOURCE_ID RT_MANIFEST "wincvt.manifest"
+#endif
+
+VIEWICON ICON "viewer.ico"
+
+CVTVIEWMENU MENU DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Open...",         IDM_OPEN
+        MENUITEM SEPARATOR
+#ifdef WINCVT_PRINT_SUPPORT
+        MENUITEM "&Print...",        IDM_PRINT
+        MENUITEM SEPARATOR
+#endif
+        MENUITEM "E&xit",            IDM_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Copy",            IDM_COPY
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About...",        IDM_ABOUT
+    END
+END
+

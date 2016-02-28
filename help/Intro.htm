@@ -1,0 +1,155 @@
+<HTML>
+<HEAD>
+	<TITLE>WinCvt Overview</TITLE>
+	<LINK HREF=help.css REL=stylesheet TYPE=text/css>
+</HEAD>
+<BODY>
+<H1>WinCvt Overview</H1>
+
+<P><B>WinCvt</B> consists of tools, a library and documentation to convert files and build applications which convert applications on the Windows platform.</P>
+
+<H2>How converters work</H2>
+
+<P>A converter is a special DLL which exports known functions to perform conversion tasks.  Conversion is based around the common format of RTF.  A file is "imported" from its native format into RTF, and "exported" from RTF to its native format.  A converter can implement import conversion, export conversion, or both.  Each converter has a list of capabilities for the formats it is capable of importing and capable of exporting, stored in the converter file itself.  In addition, once a converter is installed in the system, these capabilities are installed into a common location in the registry so that applications can utilise all known converters.</P>
+
+<P><B>WinCvt</B> implements all of these functions both in command line tools for users and administrators, as well as in a documented API which other applications can use.  The mechanics of converters are abstracted by these functions.</P>
+
+<H2>Tools and Utilities</H2>
+
+<DL>
+
+<DT><A HREF="cvtfile.htm">cvtfile.exe</A></DT>
+<DD>The cvtfile.exe binary converts a file from one format to another.</DD>
+
+<DT><A HREF="cvtinst.htm">cvtinst.exe</A></DT>
+<DD>The cvtinst.exe binary installs a converter file into the registry ready for use by applications.</DD>
+
+<DT><A HREF="cvtopen.htm">cvtopen.exe</A></DT>
+<DD>The cvtopen.exe binary converts a file from its current format to RTF for modification, and converts back to its original format when modifications are complete.</DD>
+
+<DT><A HREF="cvtquery.htm">cvtquery.exe</A></DT>
+<DD>The cvtquery.exe binary queries the system registry for installed converters, or a converter for capabilities.</DD>
+
+<DT><A HREF="cvttype.htm">cvttype.exe</A></DT>
+<DD>The cvttype.exe binary queries the system registry for a converter capable of converting the specified document.</DD>
+
+<DT><A HREF="cvtver.htm">cvtver.exe</A></DT>
+<DD>The cvtver.exe binary displays the version of the WinCvt library in use and the version of WinCvt that it was compiled against.</DD>
+
+<DT><A HREF="cvtview.htm">cvtview.exe</A></DT>
+<DD>The cvtview.exe binary displays a document in any format for browsing.</DD>
+
+<DT><A HREF="cvtwiz.htm">cvtwiz.exe</A></DT>
+<DD>The cvtwiz.exe binary displays an easy to use UI for converting files from one format to another.</DD>
+
+</DL>
+
+<H2>Developer support</H2>
+
+<H3>Version functions</H3>
+
+<DL>
+
+<DT><A HREF="WINCVT_GET_MAJOR_VERSION.htm">WINCVT_GET_MAJOR_VERSION</A></DT>
+<DD>The WINCVT_GET_MAJOR_VERSION macro retrieves the major version component from a version DWORD.</DD>
+
+<DT><A HREF="WINCVT_GET_MINOR_VERSION.htm">WINCVT_GET_MINOR_VERSION</A></DT>
+<DD>The WINCVT_GET_MINOR_VERSION macro retrieves the minor version component from a version DWORD.</DD>
+
+<DT><A HREF="WINCVT_GET_MICRO_VERSION.htm">WINCVT_GET_MICRO_VERSION</A></DT>
+<DD>The WINCVT_GET_MICRO_VERSION macro retrieves the micro version component from a version DWORD.</DD>
+
+<DT><A HREF="WinCvtAreVersionsCompatible.htm">WinCvtAreVersionsCompatible</A></DT>
+<DD>The WinCvtAreVersionsCompatible function determines if an application linked with a specific version of headers can run with this library.</DD>
+
+<DT><A HREF="WinCvtHeaderVersion.htm">WinCvtHeaderVersion</A></DT>
+<DD>The WinCvtHeaderVersion function returns the version of WinCvt that the running application was compiled against.</DD>
+
+<DT><A HREF="WinCvtIsLibraryCompatible.htm">WinCvtIsLibraryCompatible</A></DT>
+<DD>The WinCvtIsLibraryCompatible function determines if the running application can run with this library.</DD>
+
+<DT><A HREF="WinCvtLibraryVersion.htm">WinCvtLibraryVersion</A></DT>
+<DD>The WinCvtLibraryVersion function returns the version of the WinCvt library that the running application is currently using.</DD>
+
+</DL>
+
+<H3>Conversion functions</H3>
+
+
+<DL>
+<DT><A HREF="WinCvtConvertFile.htm">WinCvtConvertFile</A></DT>
+<DD>The WinCvtConvertFile function converts a file from one format to another.</DD>
+
+<DT><A HREF="WinCvtConvertToNative.htm">WinCvtConvertToNative</A></DT>
+<DD>The WinCvtConvertToNative function converts a stream of RTF into an arbitary, specified, format.</DD>
+
+<DT><A HREF="WinCvtConvertToRtf.htm">WinCvtConvertToRtf</A></DT>
+<DD>The WinCvtConvertToRtf function converts a file in an arbitary format into RTF.</DD>
+
+<DT><A HREF="WinCvtProgressCallback.htm">WinCvtProgressCallback</A></DT>
+<DD>The WinCvtProgressCallback function is called to notify an application on the progress of a call to WinCvtConvertToNative or WinCvtConvertToRtf.</DD>
+
+</DL>
+
+<H3>Converter file functions</H3>
+
+<DL>
+<DT><A HREF="WinCvtGetConverterExportCapabilityList.htm">WinCvtGetConverterExportCapabilityList</A></DT>
+<DD>The WinCvtGetConverterExportCapabilityList interrogates a particular converter file and obtains the list of export conversions it is capable of performing.</DD>
+
+<DT><A HREF="WinCvtGetConverterImportCapabilityList.htm">WinCvtGetConverterImportCapabilityList</A></DT>
+<DD>The WinCvtGetConverterImportCapabilityList interrogates a particular converter file and obtains the list of import conversions it is capable of performing.</DD>
+
+<DT><A HREF="WinCvtInstallConverter.htm">WinCvtInstallConverter</A></DT>
+<DD>The WinCvtInstallConverter function registers a converter (a .cvt file) into the registry suitable for applications to use.</DD>
+
+<DT><A HREF="WinCvtUninstallConverter.htm">WinCvtUninstallConverter</A></DT>
+<DD>The WinCvtUninstallConverter function removes a converter (a .cvt file) from the registry suitable for removal from disk.</DD>
+
+</DL>
+
+<H3>Registry functions</H3>
+
+<DL>
+
+<DT><A HREF="WinCvtGetExportConverterList.htm">WinCvtGetExportConverterList</A></DT>
+<DD>The WinCvtGetExportConverterList function retrieves the list of converters that can convert from RTF to a native format.</DD>
+
+<DT><A HREF="WinCvtGetImportConverterList.htm">WinCvtGetImportConverterList</A></DT>
+<DD>The WinCvtGetImportConverterList function retrieves the list of converters that can convert from native format to RTF.</DD>
+</DL>
+
+<H3>Support functions</H3>
+
+<DL>
+<DT><A HREF="WinCvtFinalTeardown.htm">WinCvtFinalTeardown</A></DT>
+<DD>A well behaved application should call WinCvtFinalTeardown before terminating.</DD>
+
+<DT><A HREF="WinCvtFreeConverterList.htm">WinCvtFreeConverterList</A></DT>
+<DD>The WinCvtFreeConverterList function is used to free all memory associated with a converter list obtained from other functions.</DD>
+
+<DT><A HREF="WinCvtGetClassDescription.htm">WinCvtGetClassDescription</A></DT>
+<DD>The WinCvtGetClassDescription returns a string describing a particular conversion suitable for user display.</DD>
+
+<DT><A HREF="WinCvtGetClassExtensions.htm">WinCvtGetClassExtensions</A></DT>
+<DD>The WinCvtGetClassExtensions function returns all of the extensions a class is capable of converting.</DD>
+
+<DT><A HREF="WinCvtGetClassFileName.htm">WinCvtGetClassFileName</A></DT>
+<DD>The WinCvtGetClassFileName obtains the path to the converter used for this conversion class.</DD>
+
+<DT><A HREF="WinCvtGetClassName.htm">WinCvtGetClassName</A></DT>
+<DD>The WinCvtGetClassName obtains the identifier of a class suitable for identifying the class to other functions.</DD>
+
+<DT><A HREF="WinCvtGetErrorString.htm">WinCvtGetErrorString</A></DT>
+<DD>The WinCvtGetErrorString function translates a WINCVT_STATUS code into human-readable text.</DD>
+
+<DT><A HREF="WinCvtGetFirstClass.htm">WinCvtGetFirstClass</A></DT>
+<DD>The WinCvtGetFirstClass function obtains the first conversion class from the specified list.</DD>
+
+<DT><A HREF="WinCvtGetNextClass.htm">WinCvtGetNextClass</A></DT>
+<DD>The WinCvtGetNextClass obtains a subsequent item from a list.</DD>
+
+</DL>
+
+</BODY>
+</HTML>

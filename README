@@ -1,0 +1,19 @@
+WinCvt - Windows converter toolkit
+----------------------------------
+
+To compile with MSVC, run NMAKE.  Other compilers are not supported at this
+time.
+
+This software is licensed under the terms of the GPL.  For the full text of
+this license, see the file COPYING.
+
+If you are reading this file, you have the source package to WinCvt.  You may
+find precompiled binaries more useful.  Use this package to see how it works,
+why it works, or to make your own improvements.  If you believe your
+improvements are useful, please send them to
+wincvt-devel@lists.sourceforge.net.
+
+Enjoy...
+
+- Malcolm
+malxau@users.sourceforge.net

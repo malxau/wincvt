@@ -1,0 +1,51 @@
+<HTML>
+<HEAD>
+	<TITLE>WinCvtProgressCallback</TITLE>
+	<LINK HREF=help.css REL=stylesheet TYPE=text/css>
+</HEAD>
+<BODY>
+<H1>WinCvtProgressCallback</H1>
+
+<P>The <B>WinCvtProgressCallback</B> function is called to notify an application on the progress of a call to <A HREF="WinCvtConvertToNative.htm">WinCvtConvertToNative</A> or <A HREF="WinCvtConvertToRtf.htm">WinCvtConvertToRtf</A>.
+
+<CODE><PRE>
+WINCVT_STATUS
+(WINAPI * _WinCvtProgressCallback)(
+  LONG BytesConverted,  // The number of bytes converted for this call.
+  LONG PercentComplete  // The cumulative percentage complete.
+);
+</PRE></CODE>
+
+<H2>Parameters</H2>
+
+<DL>
+
+<DT>BytesConverted</DT>
+<DD>The number of bytes converted in this operation.  This number refers to the number of bytes converted sincne the last progress notification.</DD>
+
+<DT>PercentComplete</DT>
+<DD>An approximate percentage complete of the entire conversion operation.</DD>
+
+</DL>
+
+<H2>Return Values</H2>
+<P>If the function succeeds, the return value is WINCVT_SUCCESS.  If the function fails, the return value is the error code describing the failure.  This code can be turned into a human readable string using the <A HREF="WinCvtGetErrorString.htm">WinCvtGetErrorString</A>.</P>
+
+<H2>Remarks</H2>
+<P>The <B>WinCvtProgressCallback</B> function is called to notify an application on the progress of a call to <A HREF="WinCvtConvertToNative.htm">WinCvtConvertToNative</A> or <A HREF="WinCvtConvertToRtf.htm">WinCvtConvertToRtf</A>.
+
+<H2>QuickInfo</H2>
+<P>
+<B>WinCvt: </B>Requires 0.1.0.<BR>
+<B>Header: </B>Declared in WinCvt.h.<BR>
+<B>Import Library: </B>Use WinCvt.lib.<BR>
+
+<H2>See Also</H2>
+<P>
+<A HREF="WinCvtGetErrorString.htm">WinCvtGetErrorString</A>,
+<A HREF="WinCvtConvertToNative.htm">WinCvtConvertToNative</A>,
+<A HREF="WinCvtConvertToRtf.htm">WinCvtConvertToRtf</A>.</P>
+
+</BODY>
+</HTML>
+

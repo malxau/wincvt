@@ -1,0 +1,44 @@
+<HTML>
+<HEAD>
+	<TITLE>cvtquery.exe</TITLE>
+	<LINK HREF=help.css REL=stylesheet TYPE=text/css>
+</HEAD>
+<BODY>
+<H1>cvtquery.exe</H1>
+
+<P>The <B>cvtquery.exe</B> binary queries the system registry for installed converters, or a converter for capabilities.</P>
+
+<CODE><PRE>
+cvtquery.exe [-e] [-c ConverterClass]|[ConverterPath]
+</PRE></CODE>
+
+<H2>Parameters</H2>
+
+<DL>
+
+<DT>-e</DT>
+<DD>Queries for export converters (RTF to another format.)  By default, queries for import converters (format to RTF.)</DD>
+
+<DT>-c ConverterClass</DT>
+<DD>Specifies the class of converter to query from the system registry.  If ConverterClass and ConverterPath are not specified, all converters are displayed.  ConverterClass must not be specified with ConverterPath.</DD>
+
+<DT>ConverterPath</DT>
+<DD>Specifies the path of a converter to query.  If ConverterClass and ConverterPath are not specified, all converters are displayed.  ConverterClass must not be specified with ConverterPath.</DD>
+
+</DL>
+
+<H2>Return Values</H2>
+
+<P>The <B>cvtquery.exe</B> binary returns 0 on success and nonzero on failure.</P>
+
+<H2>Remarks</H2>
+<P>The <B>cvtquery.exe</B> binary queries the system registry for installed converters, or a converter for capabilities.  It outputs this information in a three column view consisting of supported file extensions, the converter class, and a human readable string identifying the converter.</P>
+
+<H2>QuickInfo</H2>
+<P>
+<B>WinCvt: </B>Requires 0.1.0.<BR>
+
+<H2>See Also</H2>
+
+</BODY>
+</HTML>

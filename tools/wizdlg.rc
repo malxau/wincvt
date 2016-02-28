@@ -1,0 +1,80 @@
+/* WINCVT
+ * =======
+ * This software is Copyright (c) 2006-2008 Malcolm Smith.
+ * No warranty is provided, including but not limited to
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ * This code is licenced subject to the GNU General
+ * Public Licence (GPL).  See the COPYING file for more.
+ */
+
+#include <windows.h>
+#include "..\include\ver.rc"
+#include "wizdlg.h"
+
+#ifdef MANIFEST
+//
+// We can build the manifest using old resource compilers,
+// but need to ensure the definitions are in place.
+//
+#ifndef CREATEPROCESS_MANIFEST_RESOURCE_ID
+#define CREATEPROCESS_MANIFEST_RESOURCE_ID 1
+#endif
+
+#ifndef RT_MANIFEST
+#define RT_MANIFEST 24
+#endif
+
+CREATEPROCESS_MANIFEST_RESOURCE_ID RT_MANIFEST "wincvt.manifest"
+#endif
+
+// This was an IE3 addition (MSVC5+)
+#ifndef PBS_SMOOTH
+#define PBS_SMOOTH 0x01
+#endif
+
+IDD_WIZ1 DIALOG DISCARDABLE  0, 0, 400, 160
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Select File To Convert"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Please select the file you would like to convert.",
+                    -1,0,0,380,15
+    EDITTEXT        IDC_FILENAME,0,22,333,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Browse...",IDC_BROWSE,339,21,60,14
+END
+
+IDD_WIZ2 DIALOG DISCARDABLE  0, 0, 400, 160
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Select Formats"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Please select the current format of the file, and the format you would like it converted to."
+                    -1,0,0,380,15
+    LISTBOX         IDC_FILESRCTYPE,0,22,196,138,WS_VSCROLL
+    LISTBOX         IDC_FILEDESTTYPE,204,22,196,138,WS_VSCROLL
+END
+
+IDD_WIZ3 DIALOG DISCARDABLE  0, 0, 400, 160
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Save File"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Please name the converted file.",
+                    -1,0,0,380,15
+    EDITTEXT        IDC_FILENAME,0,22,333,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Browse...",IDC_BROWSE,339,21,60,14
+END
+
+IDD_WIZ4 DIALOG DISCARDABLE  0, 0, 400, 160
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Select File To Convert"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Please wait...",-1,0,0,380,15
+    CONTROL         "Progress1",IDC_PERCENT,"msctls_progress32",WS_BORDER|PBS_SMOOTH,
+                    1,24,398,14
+END
+
+
+CONVERTICON ICON "convert.ico"
+

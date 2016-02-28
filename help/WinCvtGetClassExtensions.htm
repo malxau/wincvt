@@ -1,0 +1,46 @@
+<HTML>
+<HEAD>
+	<TITLE>WinCvtGetClassExtensions</TITLE>
+	<LINK HREF=help.css REL=stylesheet TYPE=text/css>
+</HEAD>
+<BODY>
+<H1>WinCvtGetClassExtensions</H1>
+
+<P>The <B>WinCvtGetClassExtensions</B> function returns all of the extensions a class is capable of converting.</P>
+
+<CODE><PRE>
+LPCSTR
+WinCvtGetClassExtensions(
+  WINCVT_CVT_CLASS Class // Class to fetch extension list from.
+);
+</PRE></CODE>
+
+<H2>Parameters</H2>
+
+<DL>
+<DT>Class</DT>
+<DD>Class to fetch extensions from.  This class is obtained from a prior call to <A HREF="WinCvtGetFirstClass.htm">WinCvtGetFirstClass</A> or <A HREF="WinCvtGetNextClass.htm">WinCvtGetNextClass</A>.</DD>
+</DL>
+
+<H2>Return Values</H2>
+<P>This function returns a pointer to the space delimited extension list from the class.  If an error occurs, the return value is NULL.  Note that this value is read-only.  The list does not include terminating periods.  For example, an HTML converter may return "htm html HTML".</P>
+
+<H2>Remarks</H2>
+<P>The <B>WinCvtGetClassExtensions</B> function returns all of the extensions a class is capable of converting.</P>
+
+<H2>QuickInfo</H2>
+<P>
+<B>WinCvt: </B>Requires 0.1.0.<BR>
+<B>Header: </B>Declared in WinCvt.h.<BR>
+<B>Import Library: </B>Use WinCvt.lib.<BR>
+
+<H2>See Also</H2>
+<P>
+<A HREF="WinCvtGetFirstClass.htm">WinCvtGetFirstClass</A>,
+<A HREF="WinCvtGetNextClass.htm">WinCvtGetNextClass</A>,
+<A HREF="WinCvtGetClassDescription.htm">WinCvtGetClassDescription</A>,
+<A HREF="WinCvtGetClassFileName.htm">WinCvtGetClassFileName</A>,
+<A HREF="WinCvtGetClassName.htm">WinCvtGetClassName</A>.</P>
+
+</BODY>
+</HTML>

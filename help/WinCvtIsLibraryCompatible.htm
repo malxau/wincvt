@@ -1,0 +1,40 @@
+<HTML>
+<HEAD>
+	<TITLE>WinCvtIsLibraryCompatible</TITLE>
+	<LINK HREF=help.css REL=stylesheet TYPE=text/css>
+</HEAD>
+<BODY>
+<H1>WinCvtIsLibraryCompatible</H1>
+
+<P>The <B>WinCvtIsLibraryCompatible</B> function determines if the running application can run with this library.</P>
+
+<CODE><PRE>
+BOOL
+WinCvtIsLibraryCompatible();
+</PRE></CODE>
+
+<H2>Parameters</H2>
+
+<DL>
+</DL>
+
+<H2>Return Values</H2>
+<P>Returns TRUE to indicate that the application can safely run with this library, FALSE otherwise.</P>
+
+<H2>Remarks</H2>
+<P>The <B>WinCvtIsLibraryCompatible</B> function determines if the running application can run with this library.  To determine if two arbitary versions are compatible, use the <A HREF="WinCvtAreVersionsCompatible.htm">WinCvtAreVersionsCompatible</A> function.  The version of the headers currently being used can be obtained with <A HREF="WinCvtHeaderVersion.htm">WinCvtHeaderVersion</A>.  The version of the library currently being used can be obtained with <A HREF="WinCvtLibraryVersion.htm">WinCvtLibraryVersion</A>.</P>
+
+<H2>QuickInfo</H2>
+<P>
+<B>WinCvt: </B>Requires 0.1.0.<BR>
+<B>Header: </B>Declared in WinCvt.h.<BR>
+<B>Import Library: </B>Use WinCvt.lib.<BR>
+
+<H2>See Also</H2>
+<P>
+<A HREF="WinCvtAreVersionsCompatible.htm">WinCvtAreVersionsCompatible</A>,
+<A HREF="WinCvtHeaderVersion.htm">WinCvtHeaderVersion</A>,
+<A HREF="WinCvtLibraryVersion.htm">WinCvtLibraryVersion</A>.</P>
+
+</BODY>
+</HTML>

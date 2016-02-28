@@ -1,0 +1,192 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<!-- Sitemap 1.0 -->
+</HEAD><BODY>
+<OBJECT type="text/site properties">
+	<param name="ImageType" value="Folder">
+</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WinCvt">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Overview">
+			<param name="Local" value="Intro.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Utilities">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="cvtfile.exe">
+				<param name="Local" value="cvtfile.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="cvtinst.exe">
+				<param name="Local" value="cvtinst.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="cvtopen.exe">
+				<param name="Local" value="cvtopen.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="cvtquery.exe">
+				<param name="Local" value="cvtquery.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="cvttype.exe">
+				<param name="Local" value="cvttype.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="cvtver.exe">
+				<param name="Local" value="cvtver.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="cvtview.exe">
+				<param name="Local" value="cvtview.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="cvtwiz.exe">
+				<param name="Local" value="cvtwiz.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Developer API">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Version functions">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="WINCVT_GET_MAJOR_VERSION">
+					<param name="Local" value="WINCVT_GET_MAJOR_VERSION.htm">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="WINCVT_GET_MINOR_VERSION">
+					<param name="Local" value="WINCVT_GET_MINOR_VERSION.htm">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="WINCVT_GET_MICRO_VERSION">
+					<param name="Local" value="WINCVT_GET_MICRO_VERSION.htm">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="WinCvtAreVersionsCompatible">
+					<param name="Local" value="WinCvtAreVersionsCompatible.htm">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="WinCvtHeaderVersion">
+					<param name="Local" value="WinCvtHeaderVersion.htm">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="WinCvtIsLibraryCompatible">
+					<param name="Local" value="WinCvtIsLibraryCompatible.htm">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="WinCvtLibraryVersion">
+					<param name="Local" value="WinCvtLibraryVersion.htm">
+					</OBJECT>
+			</UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Conversion functions">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="WinCvtConvertFile">
+					<param name="Local" value="WinCvtConvertFile.htm">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="WinCvtConvertToNative">
+					<param name="Local" value="WinCvtConvertToNative.htm">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="WinCvtConvertToRtf">
+					<param name="Local" value="WinCvtConvertToRtf.htm">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="WinCvtProgressCallback">
+					<param name="Local" value="WinCvtProgressCallback.htm">
+					</OBJECT>
+			</UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Converter file functions">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="WinCvtGetConverterExportCapabilityList">
+					<param name="Local" value="WinCvtGetConverterExportCapabilityList.htm">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="WinCvtGetConverterImportCapabilityList">
+					<param name="Local" value="WinCvtGetConverterImportCapabilityList.htm">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="WinCvtInstallConverter">
+					<param name="Local" value="WinCvtInstallConverter.htm">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="WinCvtUninstallConverter">
+					<param name="Local" value="WinCvtUninstallConverter.htm">
+					</OBJECT>
+			</UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Registry functions">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="WinCvtGetExportConverterList">
+					<param name="Local" value="WinCvtGetExportConverterList.htm">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="WinCvtGetImportConverterList">
+					<param name="Local" value="WinCvtGetImportConverterList.htm">
+					</OBJECT>
+			</UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Support functions">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="WinCvtFinalTeardown">
+					<param name="Local" value="WinCvtFinalTeardown.htm">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="WinCvtFreeConverterList">
+					<param name="Local" value="WinCvtFreeConverterList.htm">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="WinCvtGetClassDescription">
+					<param name="Local" value="WinCvtGetClassDescription.htm">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="WinCvtGetClassExtensions">
+					<param name="Local" value="WinCvtGetClassExtensions.htm">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="WinCvtGetClassFileName">
+					<param name="Local" value="WinCvtGetClassFileName.htm">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="WinCvtGetClassName">
+					<param name="Local" value="WinCvtGetClassName.htm">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="WinCvtGetErrorString">
+					<param name="Local" value="WinCvtGetErrorString.htm">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="WinCvtGetFirstClass">
+					<param name="Local" value="WinCvtGetFirstClass.htm">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="WinCvtGetNextClass">
+					<param name="Local" value="WinCvtGetNextClass.htm">
+					</OBJECT>
+			</UL>
+		</UL>
+	</UL>
+</UL>
+</BODY></HTML>

@@ -1,0 +1,44 @@
+<HTML>
+<HEAD>
+	<TITLE>cvtinst.exe</TITLE>
+	<LINK HREF=help.css REL=stylesheet TYPE=text/css>
+</HEAD>
+<BODY>
+<H1>cvtinst.exe</H1>
+
+<P>The <B>cvtinst.exe</B> binary installs a converter file into the registry ready for use by applications.</P>
+
+<CODE><PRE>
+cvtinst.exe [-e] [-u] &lt;converter&gt;
+</PRE></CODE>
+
+<H2>Parameters</H2>
+
+<DL>
+
+<DT>-e</DT>
+<DD>Uninstalls, rather than installs, the specified converter.  This switch is available in WinCvt 0.3.0 or newer.</DD>
+
+<DT>-u</DT>
+<DD>Performs the installation or uninstallation on the user registry, rather than the system-wide registry.  Note that not all applications will process data in the user registry.  This switch is available in WinCvt 0.3.0 or newer.</DD>
+
+<DT>converter</DT>
+<DD>Full path to the converter file to install or uninstall, eg. "C:\converters\foo.cvt"</DD>
+
+</DL>
+
+<H2>Return Values</H2>
+
+<P>The <B>cvtinst.exe</B> binary returns 0 on success and nonzero on failure.</P>
+
+<H2>Remarks</H2>
+<P>The <B>cvtinst.exe</B> binary installs a converter file into the registry ready for use by applications.</P>
+
+<H2>QuickInfo</H2>
+<P>
+<B>WinCvt: </B>Requires 0.1.0.<BR>
+
+<H2>See Also</H2>
+
+</BODY>
+</HTML>

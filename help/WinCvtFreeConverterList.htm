@@ -1,0 +1,46 @@
+<HTML>
+<HEAD>
+	<TITLE>WinCvtFreeConverterList</TITLE>
+	<LINK HREF=help.css REL=stylesheet TYPE=text/css>
+</HEAD>
+<BODY>
+<H1>WinCvtFreeConverterList</H1>
+
+<P>The <B>WinCvtFreeConverterList</B> function is used to free all memory associated with a converter list obtained from other functions.</P>
+
+<CODE><PRE>
+WINCVT_STATUS
+WinCvtFreeConverterList(
+  WINCVT_CVT_LIST List  // The converter list to free
+);
+</PRE></CODE>
+
+<H2>Parameters</H2>
+
+<DL>
+<DT>List</DT>
+<DD>The converter list to free.  This list is obtained from a prior call to <A HREF="WinCvtGetConverterExportCapabilityList.htm">WinCvtGetConverterExportCapabilityList</A>, <A HREF="WinCvtGetConverterImportCapabilityList.htm">WinCvtGetConverterImportCapabilityList</A>, <A HREF="WinCvtGetExportConverterList.htm">WinCvtGetExportConverterList</A> or <A HREF="WinCvtGetImportConverterList.htm">WinCvtGetImportConverterList</A>.</DD>
+</DL>
+
+<H2>Return Values</H2>
+<P>If the function succeeds, the return value is WINCVT_SUCCESS.  If the function fails, the return value is the error code describing the failure.  This code can be turned into a human readable string using the <A HREF="WinCvtGetErrorString.htm">WinCvtGetErrorString</A>.</P>
+
+<H2>Remarks</H2>
+<P>The <B>WinCvtFreeConverterList</B> function is used to free all memory associated with a converter list obtained from other functions.</P>
+
+<H2>QuickInfo</H2>
+<P>
+<B>WinCvt: </B>Requires 0.1.0.<BR>
+<B>Header: </B>Declared in WinCvt.h.<BR>
+<B>Import Library: </B>Use WinCvt.lib.<BR>
+
+<H2>See Also</H2>
+<P>
+<A HREF="WinCvtGetConverterExportCapabilityList.htm">WinCvtGetConverterExportCapabilityList</A>,
+<A HREF="WinCvtGetConverterImportCapabilityList.htm">WinCvtGetConverterImportCapabilityList</A>,
+<A HREF="WinCvtGetErrorString.htm">WinCvtGetErrorString</A>,
+<A HREF="WinCvtGetExportConverterList.htm">WinCvtGetExportConverterList</A>,
+<A HREF="WinCvtGetImportConverterList.htm">WinCvtGetImportConverterList</A>.</P>
+
+</BODY>
+</HTML>

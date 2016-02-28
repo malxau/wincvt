@@ -1,0 +1,52 @@
+<HTML>
+<HEAD>
+	<TITLE>WinCvtGetErrorString</TITLE>
+	<LINK HREF=help.css REL=stylesheet TYPE=text/css>
+</HEAD>
+<BODY>
+<H1>WinCvtGetErrorString</H1>
+
+<P>The <B>WinCvtGetErrorString</B> function translates a WINCVT_STATUS code into human-readable text.</P>
+
+<CODE><PRE>
+WINCVT_STATUS
+WinCvtGetErrorString(
+  WINCVT_STATUS Error,  // The error code to convert.
+  LPSTR szBuffer,       // The buffer to store the resulting string.
+  DWORD BufferLength    // The length of the buffer.
+);
+</PRE></CODE>
+
+<H2>Parameters</H2>
+
+<DL>
+
+<DT>Error</DT>
+<DD>The numeric error code returned by a WinCvt function.</DD>
+
+<DT>szBuffer</DT>
+<DD>Buffer to be filled with the error string.</DD>
+
+<DT>BufferLength</DT>
+<DD>The length of the buffer supplied in the szBuffer parameter.</DD>
+
+</DL>
+
+<H2>Return Values</H2>
+<P>If the function succeeds, the return value is WINCVT_SUCCESS.  If the function fails, the return value is the error code describing the failure.  This code can be turned into a human readable string using the <B>WinCvtGetErrorString</B>.</P>
+
+<H2>Remarks</H2>
+<P>The <B>WinCvtGetErrorString</B> function translates a WINCVT_STATUS code into human-readable text.</P>
+
+<H2>QuickInfo</H2>
+<P>
+<B>WinCvt: </B>Requires 0.1.0.<BR>
+<B>Header: </B>Declared in WinCvt.h.<BR>
+<B>Import Library: </B>Use WinCvt.lib.<BR>
+
+<H2>See Also</H2>
+<P>
+<A HREF="Errors.htm">WinCvt Error Codes</A>.</P>
+
+</BODY>
+</HTML>

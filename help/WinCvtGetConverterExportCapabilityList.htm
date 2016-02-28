@@ -1,0 +1,52 @@
+<HTML>
+<HEAD>
+	<TITLE>WinCvtGetConverterExportCapabilityList</TITLE>
+	<LINK HREF=help.css REL=stylesheet TYPE=text/css>
+</HEAD>
+<BODY>
+<H1>WinCvtGetConverterExportCapabilityList</H1>
+
+<P>The <B>WinCvtGetConverterExportCapabilityList</B> interrogates a particular converter file and obtains the list of export conversions it is capable of performing.</P>
+
+<CODE><PRE>
+WINCVT_STATUS
+WinCvtGetConverterExportCapabilityList(
+  LPCSTR szConverter,   // Path to the converter to query
+  WINCVT_CVT_LIST* List // List of the converter's capabilities
+);
+</PRE></CODE>
+
+<H2>Parameters</H2>
+
+<DL>
+
+<DT>szConverter</DT>
+<DD>Path to the converter to query.</DD>
+
+<DT>List</DT>
+<DD>Pointer to a list object.  Upon successful completion of this function, this will point to a list of export conversion classes that can be provided by this converter.  To enumerate this list, use the <A HREF="WinCvtGetFirstClass.htm">WinCvtGetFirstClass</A> and <A HREF="WinCvtGetNextClass.htm">WinCvtGetNextClass</A> functions.  To free this list, call <A HREF="WinCvtFreeConverterList.htm">WinCvtFreeConverterList</A>.</DD>
+
+</DL>
+
+<H2>Return Values</H2>
+<P>If the function succeeds, the return value is WINCVT_SUCCESS.  If the function fails, the return value is the error code describing the failure.  This code can be turned into a human readable string using the <A HREF="WinCvtGetErrorString.htm">WinCvtGetErrorString</A>.</P>
+
+<H2>Remarks</H2>
+<P>The <B>WinCvtGetConverterExportCapabilityList</B> interrogates a particular converter file and obtains the list of export conversions it is capable of performing.  To query the import converter capabilities, call <A HREF="WinCvtGetConverterImportCapabilityList.htm">WinCvtGetConverterImportCapabilityList</A>.</P>
+
+<H2>QuickInfo</H2>
+<P>
+<B>WinCvt: </B>Requires 0.1.0.<BR>
+<B>Header: </B>Declared in WinCvt.h.<BR>
+<B>Import Library: </B>Use WinCvt.lib.<BR>
+
+<H2>See Also</H2>
+<P>
+<A HREF="WinCvtFreeConverterList.htm">WinCvtFreeConverterList</A>,
+<A HREF="WinCvtGetFirstClass.htm">WinCvtGetFirstClass</A>,
+<A HREF="WinCvtGetNextClass.htm">WinCvtGetNextClass</A>,
+<A HREF="WinCvtGetConverterImportCapabilityList.htm">WinCvtGetConverterImportCapabilityList</A>,
+<A HREF="WinCvtGetErrorString.htm">WinCvtGetErrorString</A>.</P>
+
+</BODY>
+</HTML>

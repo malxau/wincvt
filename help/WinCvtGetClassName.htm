@@ -1,0 +1,51 @@
+<HTML>
+<HEAD>
+	<TITLE>WinCvtGetClassName</TITLE>
+	<LINK HREF=help.css REL=stylesheet TYPE=text/css>
+</HEAD>
+<BODY>
+<H1>WinCvtGetClassName</H1>
+
+<P>The <B>WinCvtGetClassName</B> obtains the identifier of a class suitable for identifying the class to other functions.</P>
+
+<CODE><PRE>
+LPCSTR
+WinCvtGetClassName(
+  WINCVT_CVT_CLASS Class // Class to fetch class name from.
+);
+</PRE></CODE>
+
+<H2>Parameters</H2>
+
+<DL>
+<DT>Class</DT>
+<DD>Class to fetch name from.  This class is obtained from a prior call to <A HREF="WinCvtGetFirstClass.htm">WinCvtGetFirstClass</A> or <A HREF="WinCvtGetNextClass.htm">WinCvtGetNextClass</A>.</DD>
+</DL>
+
+<H2>Return Values</H2>
+<P>This function returns a pointer to the human-readable class name from the class.  If an error occurs, the return value is NULL.  Note that this value is read-only.  The resulting class name from this function is typically used as input for one of <A HREF="WinCvtConvertFile.htm">WinCvtConvertFile</A>, <A HREF="WinCvtConvertToNative.htm">WinCvtConvertToNative</A>, <A HREF="WinCvtConvertToRtf.htm">WinCvtConvertToRtf</A>, <A HREF="WinCvtGetExportConverterList.htm">WinCvtGetExportConverterList</A> or <A HREF="WinCvtGetImportConverterList.htm">WinCvtGetImportConverterList</A>.</P>
+
+<H2>Remarks</H2>
+<P>The <B>WinCvtGetClassName</B> obtains the identifier of a class suitable for identifying the class to other functions.</P>
+
+<H2>QuickInfo</H2>
+<P>
+<B>WinCvt: </B>Requires 0.1.0.<BR>
+<B>Header: </B>Declared in WinCvt.h.<BR>
+<B>Import Library: </B>Use WinCvt.lib.<BR>
+
+<H2>See Also</H2>
+<P>
+<A HREF="WinCvtConvertFile.htm">WinCvtConvertFile</A>,
+<A HREF="WinCvtConvertToNative.htm">WinCvtConvertToNative</A>,
+<A HREF="WinCvtConvertToRtf.htm">WinCvtConvertToRtf</A>,
+<A HREF="WinCvtGetFirstClass.htm">WinCvtGetFirstClass</A>,
+<A HREF="WinCvtGetNextClass.htm">WinCvtGetNextClass</A>,
+<A HREF="WinCvtGetClassDescription.htm">WinCvtGetClassDescription</A>,
+<A HREF="WinCvtGetClassExtensions.htm">WinCvtGetClassExtensions</A>,
+<A HREF="WinCvtGetClassFileName.htm">WinCvtGetClassFileName</A>,
+<A HREF="WinCvtGetExportConverterList.htm">WinCvtGetExportConverterList</A>,
+<A HREF="WinCvtGetImportConverterList.htm">WinCvtGetImportConverterList</A>.</P>
+
+</BODY>
+</HTML>

@@ -1,0 +1,46 @@
+<HTML>
+<HEAD>
+	<TITLE>WinCvtGetClassDescription</TITLE>
+	<LINK HREF=help.css REL=stylesheet TYPE=text/css>
+</HEAD>
+<BODY>
+<H1>WinCvtGetClassDescription</H1>
+
+<P>The <B>WinCvtGetClassDescription</B> returns a string describing a particular conversion suitable for user display.</P>
+
+<CODE><PRE>
+LPCSTR
+WinCvtGetClassDescription(
+  WINCVT_CVT_CLASS Class // Class to fetch description from.
+);
+</PRE></CODE>
+
+<H2>Parameters</H2>
+
+<DL>
+<DT>Class</DT>
+<DD>Class to fetch description from.  This class is obtained from a prior call to <A HREF="WinCvtGetFirstClass.htm">WinCvtGetFirstClass</A> or <A HREF="WinCvtGetNextClass.htm">WinCvtGetNextClass</A>.</DD>
+</DL>
+
+<H2>Return Values</H2>
+<P>This function returns a pointer to the human-readable class description from the class.  If an error occurs, the return value is NULL.  Note that this value is read-only.</P>
+
+<H2>Remarks</H2>
+<P>The <B>WinCvtGetClassDescription</B> returns a string describing a particular conversion suitable for user display.</P>
+
+<H2>QuickInfo</H2>
+<P>
+<B>WinCvt: </B>Requires 0.1.0.<BR>
+<B>Header: </B>Declared in WinCvt.h.<BR>
+<B>Import Library: </B>Use WinCvt.lib.<BR>
+
+<H2>See Also</H2>
+<P>
+<A HREF="WinCvtGetFirstClass.htm">WinCvtGetFirstClass</A>,
+<A HREF="WinCvtGetNextClass.htm">WinCvtGetNextClass</A>,
+<A HREF="WinCvtGetClassExtensions.htm">WinCvtGetClassExtensions</A>,
+<A HREF="WinCvtGetClassFileName.htm">WinCvtGetClassFileName</A>,
+<A HREF="WinCvtGetClassName.htm">WinCvtGetClassName</A>.</P>
+
+</BODY>
+</HTML>

@@ -1,0 +1,16 @@
+****
+
+0.6.x:
+
+1. Finish print support in viewer
+2. Import Convert to memory
+3. Shell extension
+4. Autoconf
+
+****
+
+0.8.x:
+
+1. Unicode clean - two exports per string *sigh*
+
+

@@ -1,0 +1,51 @@
+<HTML>
+<HEAD>
+	<TITLE>WinCvtInstallConverter</TITLE>
+	<LINK HREF=help.css REL=stylesheet TYPE=text/css>
+</HEAD>
+<BODY>
+<H1>WinCvtInstallConverter</H1>
+
+<P>The <B>WinCvtInstallConverter</B> function registers a converter (a .cvt file) into the registry suitable for applications to use.</P>
+
+<CODE><PRE>
+WINCVT_STATUS
+WinCvtInstallConverter(
+  LPCSTR szConverter, // The path of the converter to install
+  BOOL bUserOnly      // If TRUE, install for this user only
+);
+</PRE></CODE>
+
+<H2>Parameters</H2>
+
+<DL>
+
+<DT>szConverter</DT>
+<DD>The path of the converter to install into the registry.  This path is entered into the registry along with converter information; be sure that the converter is in its final location before calling this function.</DD>
+
+<DT>bUserOnly</DT>
+<DD>If this value is TRUE, the converter is installed in the user registry.  WinCvt applications will query this location along with the system registry, but other applications may not.  If this value is FALSE, the converter is installed in the system-wide registry.  This parameter is only supported on WinCvt 0.3.0 and newer; on earlier versions, it must be FALSE.</DD>
+
+</DL>
+
+<H2>Return Values</H2>
+<P>If the function succeeds, the return value is WINCVT_SUCCESS.  If the function fails, the return value is the error code describing the failure.  This code can be turned into a human readable string using the <A HREF="WinCvtGetErrorString.htm">WinCvtGetErrorString</A>.</P>
+
+<H2>Remarks</H2>
+<P>The <B>WinCvtInstallConverter</B> function registers a converter (a .cvt file) into the registry suitable for applications to use.  Once registered, it will be retrieved by the <A HREF="WinCvtGetExportConverterList.htm">WinCvtGetExportConverterList</A> and/or <A HREF="WinCvtGetImportConverterList.htm">WinCvtGetImportConverterList</A> functions.  To uninstall the converter, call the <A HREF="WinCvtUninstallConverter.htm">WinCvtUninstallConverter</A> function.</P>
+
+<H2>QuickInfo</H2>
+<P>
+<B>WinCvt: </B>Requires 0.1.0.<BR>
+<B>Header: </B>Declared in WinCvt.h.<BR>
+<B>Import Library: </B>Use WinCvt.lib.<BR>
+
+<H2>See Also</H2>
+<P>
+<A HREF="WinCvtGetErrorString.htm">WinCvtGetErrorString</A>,
+<A HREF="WinCvtGetExportConverterList.htm">WinCvtGetExportConverterList</A>,
+<A HREF="WinCvtGetImportConverterList.htm">WinCvtGetImportConverterList</A>,
+<A HREF="WinCvtUninstallConverter.htm">WinCvtUninstallConverter</A>.</P>
+
+</BODY>
+</HTML>

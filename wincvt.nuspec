@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+<metadata>
+<!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
+<id>wincvt</id>
+<title>WinCvt converter system</title>
+<version>0.4.1</version>
+<authors>malxau</authors>
+<owners>malxau</owners>
+<summary>WinCvt library and tools for invoking Windows/Office file format converters</summary>
+<description>WinCvt library and tools for invoking Windows/Office file format converters</description>
+<projectUrl>http://wincvt.sf.net/</projectUrl>
+<tags>wincvt</tags>
+<copyright>Copyright (c) 2006-2016 Malcolm J. Smith</copyright>
+<licenseUrl>https://github.com/malxau/wincvt/blob/master/COPYING</licenseUrl>
+<packageSourceUrl>https://github.com/malxau/wincvt</packageSourceUrl>
+<projectSourceUrl>https://github.com/malxau/wincvt</projectSourceUrl>
+<requireLicenseAcceptance>false</requireLicenseAcceptance>
+</metadata>
+<files>
+<file src="tools\cvtfile.exe" target="tools" />
+<file src="tools\cvtinst.exe" target="tools" />
+<file src="tools\cvtopen.exe" target="tools" />
+<file src="tools\cvtquery.exe" target="tools" />
+<file src="tools\cvttype.exe" target="tools" />
+<file src="tools\cvtver.exe" target="tools" />
+<file src="tools\cvtview.exe" target="tools" />
+<file src="tools\cvtview.exe.gui" target="tools" />
+<file src="tools\cvtwiz.exe" target="tools" />
+<file src="tools\cvtwiz.exe.gui" target="tools" />
+<file src="tools\wincvt.dll" target="tools" />
+<file src="tools\wincvt.chm" target="doc" />
+<file src="tools\wincvt.h" target="include" />
+<file src="tools\wincvt.lib" target="lib" />
+</files>
+</package>

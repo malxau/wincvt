@@ -10,7 +10,7 @@ LINK=link.exe -nologo -incremental:no
 MAKE=nmake.exe -nologo
 
 CFLAGS=-nologo -W3 -Gs9999 -I.
-LDFLAGS=-fixed -subsystem:console
+LDFLAGS=-fixed
 LIBS=kernel32.lib advapi32.lib
 
 !IF $(DEBUG)==1
@@ -57,12 +57,18 @@ CRTLIB=libcmt.lib
 #
 
 !IF [$(CC) -GS- 2>&1 | find "unknown" >NUL]>0
-CFLAGS_GS=-GS-
+CFLAGS=$(CFLAGS) -GS-
+CFLAGS=$(CFLAGS) -GF
 !IF [$(CC) -? 2>&1 | find "/MP" >NUL]==0
-CFLAGS_MP=-MP
+CFLAGS=$(CFLAGS) -MP
+!ENDIF
+!ELSE
+!IF [$(CC) -GF 2>&1 | find "unknown" >NUL]>0
+CFLAGS=$(CFLAGS) -GF
+!ELSE
+CFLAGS=$(CFLAGS) -Gf
 !ENDIF
 !ENDIF
-CFLAGS_GF=-GF
 
 #
 # Visual C 2003 really wants this and isn't satisfied
@@ -73,13 +79,70 @@ CFLAGS_GF=-GF
 LDFLAGS=$(LDFLAGS) -OPT:NOWIN98
 !ENDIF
 
+!IF "$(MINICRT)"=="1"
+
+#
+# Try to detect which architecture the compiler is generating.  This is done
+# to help the subsystem version detection, below.  If we don't guess it's
+# not fatal, the linker will figure it out in the end.
+#
+
+!IF [$(CC) 2>&1 | find "for x86" >NUL]==0
+LDFLAGS=$(LDFLAGS) -MACHINE:X86
+!ELSE
+!IF [$(CC) 2>&1 | find "for x64" >NUL]==0
+LDFLAGS=$(LDFLAGS) -MACHINE:X64
+!ENDIF
+!ENDIF
+
+#
+# Look for the oldest subsystem version the linker is willing to generate
+# for us.  This app with minicrt will run back to NT 3.1, but requires OS
+# support added in 4.0, but typically the primary limit is the linker.
+# Without minicrt we're at the mercy of whatever CRT is there, so just
+# trust the defaults.  For execution efficiency, these checks are
+# structured as a tree:
+#
+#                             5.0?
+#                           /      \
+#                         /          \
+#                       /              \
+#                   4.0?                5.2?
+#                 /      \            /      \
+#              4.0         5.0    5.1?         6.0?
+#                                /    \       /    \
+#                              5.1    5.2   6.0   default
+#
+
+!IF [$(LINK) $(LDFLAGS) -SUBSYSTEM:CONSOLE,5.0 2>&1 | find "default subsystem" >NUL]>0
+!IF [$(LINK) $(LDFLAGS) -SUBSYSTEM:CONSOLE,4.0 2>&1 | find "default subsystem" >NUL]>0
+LDFLAGS=$(LDFLAGS) -SUBSYSTEM:CONSOLE,4.0
+!ELSE  # !4.0
+LDFLAGS=$(LDFLAGS) -SUBSYSTEM:CONSOLE,5.0
+!ENDIF # 4.0
+!ELSE  # !5.0
+!IF [$(LINK) $(LDFLAGS) -SUBSYSTEM:CONSOLE,5.2 2>&1 | find "default subsystem" >NUL]>0
+!IF [$(LINK) $(LDFLAGS) -SUBSYSTEM:CONSOLE,5.1 2>&1 | find "default subsystem" >NUL]>0
+LDFLAGS=$(LDFLAGS) -SUBSYSTEM:CONSOLE,5.1
+!ELSE  # !5.1
+LDFLAGS=$(LDFLAGS) -SUBSYSTEM:CONSOLE,5.2
+!ENDIF # 5.1
+!ELSE  # !5.2
+!IF [$(LINK) $(LDFLAGS) -SUBSYSTEM:CONSOLE,6.0 2>&1 | find "default subsystem" >NUL]>0
+LDFLAGS=$(LDFLAGS) -SUBSYSTEM:CONSOLE
+!ENDIF # 6.0
+!ENDIF # 5.2
+!ENDIF # 5.0
+!ELSE  # MINICRT
+LDFLAGS=$(LDFLAGS) -SUBSYSTEM:CONSOLE
+!ENDIF
+
 #
 # We could also probe for -incremental:no,
 # although they typically are only warnings and
 # probes are expensive, so we don't.
 #
 
-CFLAGS=$(CFLAGS) $(CFLAGS_GS) $(CFLAGS_MP) $(CFLAGS_GF)
 DEPS=ver.obj
 
 ver.obj: ..\include\ver.rc

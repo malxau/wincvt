@@ -48,4 +48,8 @@ SHIPPDB=/DSHIPPDB
 distribution: all
 	@echo Making self-installer...
 	@makensis /V2 $(SHIPPDB) wincvt.nsi
+	@cd bin
+	@yori -c ypm -c wincvt-win32.cab wincvt 0.4.1 win32 -filelist ..\wincvt.lst -minimumosbuild 1381 -upgradepath http://www.malsmith.net/download/?obj=wincvt/latest-stable/wincvt-win32.cab -sourcepath http://www.malsmith.net/download/?obj=wincvt/latest-stable/wincvt-source.cab
+	@cd ..
+	@yori -c ypm -cs bin\wincvt-source.cab wincvt-source 0.4.1 -filepath .
 	@if exist bin\wincvt-win32-installer* echo Distribution built successfully!

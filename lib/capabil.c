@@ -127,9 +127,9 @@ WinCvtIntGetConverterCapabilityList(
 
 		(*Output)->NumberOfClasses++;
 
-		szClasses+=strlen(szClasses);
-		szDescriptions+=strlen(szDescriptions);
-		szExtensions+=strlen(szExtensions);
+		szClasses+=strlen(szClasses)+1;
+		szDescriptions+=strlen(szDescriptions)+1;
+		szExtensions+=strlen(szExtensions)+1;
 	}
 
 	if (Prev) {

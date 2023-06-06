@@ -3,7 +3,7 @@
 ; The name of the installer
 Name "WinCvt"
 SetCompressor LZMA
-RequestExecutionLevel user
+RequestExecutionLevel admin
 
 !define /date BUILDDATE "%Y%m%d"
 
